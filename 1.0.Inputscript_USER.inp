@@ -1,0 +1,93 @@
+						PURE GAS SOLVER
+!-----------------------------------------------------------------
+0.60 1.20 0.050	Dimensions of the Domain (LxHxW)
+48 65 1			Grid Dimension of the Domain (Nx x Ny x Nz)
+!-----------------------------------------------------------------
+-->	GAS DETAILS
+!-----------------------------------------------------------------
+500.0			Gas flow rate (in lpm)
+1.177			Density of the gas
+1.983e-5		Viscosity of the gas
+!-----------------------------------------------------------------
+-->	Fines DETAILS
+!-----------------------------------------------------------------
+0.10			Fines mass flow rate (in kg/m3 s)
+100-6			Size of fines particles
+1080.0			Density of the fines fines
+0.8				Viscosity of the fines
+!-----------------------------------------------------------------
+-->	TUYERE DETAILS 
+!-----------------------------------------------------------------
+0.20			Height of Tuyere from bottom
+5.0e-3			Diameter of Tuyere opening
+0.05			Protrusion depth of the Tuyere
+!-----------------------------------------------------------------
+-->	DEADMAN REGION PARAMETERS
+!-----------------------------------------------------------------
+0				Include Deadman (0-No, 1-Yes) (LOGICAL)
+0.03 0.00		Minimum and Maximum X co-ordinates of the Deadman
+0.07 0.00		Minimum and Maximum X co-ordinates of the Deadman
+60.0			Angle of the Deadman (in degrees)
+!-----------------------------------------------------------------
+-->	BED DYNAMICS (BD_Flag)
+!-----------------------------------------------------------------
+0				Correlation (0) or DEM(1) for voidage and raceway determination   (LOGICAL)
+0				Constant voidage model(0) or DEM(1)  (LOGICAL)
+0				Stationary (0) or Descending bed (1)  (LOGICAL)
+!-----------------------------------------------------------------
+-->	CONSTANT VOIDAGE BED (Used if BD_Flag = 0)
+!-----------------------------------------------------------------
+0.40			Domain Voidage
+0.85			Raceway Voidage
+!-----------------------------------------------------------------
+-->	PACKED BED (Used if BD_Flag = 1)
+!-----------------------------------------------------------------
+600				Number of bed particles
+6				Number of Neighbours
+10e-3			Size of the particles
+1.0				Sphericity
+2500.0			Density of the Packing material
+1.02			Mark
+0.3				Co-efficient of friction
+0.8				Co-efficient of restitution
+1000			Stiffness co-efficient
+2				Type of Packing (=1 structured bed, =2 random bed and =3 corex bed)
+0.02			Time for packing
+1.0e-6			Timestep
+!-----------------------------------------------------------------
+-->	MOVING BED
+!-----------------------------------------------------------------
+0				Particle Removal Rate
+!-----------------------------------------------------------------
+-->	PHYSICAL MODELLING CONSTANTS 
+!-----------------------------------------------------------------
+9.81			Acceleration due to gravity
+0.09			C mu
+!-----------------------------------------------------------------
+-->	CONVERGENCE PARAMETERS
+!-----------------------------------------------------------------
+1.0e-3				Tolerance spatial convergence for gas flow
+1.0e-10				Mass Balance for fine flow
+1.00				Relax U
+1.00				Relax V
+1.00				Relax P
+1.00				Relax KE
+1.00				Relax DE
+1.00				Relax EPFD
+0.75				Omega U for gas
+0.75				Omega V for gas
+0.75				Omega P for gas
+0.75				Omega KE for gas
+0.75				Omega DE for gas
+0.35				Omega U for fines
+0.99				Omega V for fines
+0.75				Omega KE for fines
+0.75				Omega DE for fines
+!-----------------------------------------------------------------
+-->	TURBULENCE MODELLING PARAMETERS
+!-----------------------------------------------------------------
+1.44			C1			
+1.92			C2
+1.00			Sigma k
+1.22			Sigma e
+0.002			Turbulent mixing length
